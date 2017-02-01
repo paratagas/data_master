@@ -1,0 +1,11 @@
+# jetBrains IDE project files
+.idea
+
+# Desktop releases
+/~/
+
+# Webix files
+/codebase/
+
+# Node modules
+/node_modules/
