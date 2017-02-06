@@ -9,6 +9,7 @@ var localizator = translations[defaultLocale];
 function getData() {
     $$("dataFromBackend").clearAll();
     $$("dataFromBackend").load("http://localhost/data_master/data/data.php");
+    //$$("dataFromBackend").load("http://localhost:3000/data");
 }
 
 /**
@@ -69,6 +70,7 @@ function resetFilters() {
     // reload grid
     $$("dataFromBackend").clearAll();
     $$("dataFromBackend").load("http://localhost/data_master/data/data.php"); 
+    //$$("dataFromBackend").load("http://localhost:3000/data"); 
 }
 
 /**

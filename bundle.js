@@ -45,6 +45,7 @@ var localizator = translations[defaultLocale];
 function getData() {
     $$("dataFromBackend").clearAll();
     $$("dataFromBackend").load("http://localhost/data_master/data/data.php");
+    //$$("dataFromBackend").load("http://localhost:3000/data");
 }
 
 /**
@@ -105,6 +106,7 @@ function resetFilters() {
     // reload grid
     $$("dataFromBackend").clearAll();
     $$("dataFromBackend").load("http://localhost/data_master/data/data.php"); 
+    //$$("dataFromBackend").load("http://localhost:3000/data"); 
 }
 
 /**
@@ -287,6 +289,7 @@ webix.ui({
 		multiselect: true,
 	    // initial data load
 	    data: webix.ajax().post("http://localhost/electron_with_backend/data/data.php")
+	    //data: webix.ajax().get("http://localhost:3000/data")
 	  },
 	  	{
 	  		view: "layout",
