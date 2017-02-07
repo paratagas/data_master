@@ -116,8 +116,9 @@ webix.ui({
 		select: "row",
 		multiselect: true,
 	    // initial data load
-	    data: webix.ajax().post("http://localhost/electron_with_backend/data/data.php")
-	    //data: webix.ajax().get("http://localhost:3000/data")
+	    //data: webix.ajax().post("http://localhost/electron_with_backend/data/data.php")
+	    data: webix.ajax().get("http://localhost:3000/data")
+	    //data: initialLoad()
 	  },
 	  	{
 	  		view: "layout",

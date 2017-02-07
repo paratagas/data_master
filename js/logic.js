@@ -8,8 +8,11 @@ var localizator = translations[defaultLocale];
  */
 function getData() {
     $$("dataFromBackend").clearAll();
-    $$("dataFromBackend").load("http://localhost/data_master/data/data.php");
-    //$$("dataFromBackend").load("http://localhost:3000/data");
+    $$("dataFromBackend").load("http://localhost:3000/data");
+
+    // old backend on Apache/PHP:
+    //$$("dataFromBackend").load("http://localhost/data_master/data/data.php");
+    
 }
 
 /**
@@ -53,8 +56,18 @@ function deleteRow() {
 function saveData() {
     var grid = $$("dataFromBackend");
     var serializedData = grid.serialize();
-    webix.ajax().post("http://localhost/data_master/data/save.php", {data: serializedData});
+    
+    // The default Webix header definition is "Content-type": "application/x-www-form-urlencoded"
+    // JSON data will not work in this case. Set "Content-Type": "application/json"
+    webix.ajax().headers({
+        "Content-Type": "application/json"
+    }).post("http://localhost:3000/data", {data: serializedData});
+
+    // old backend on Apache/PHP:
+    //webix.ajax().post("http://localhost/data_master/data/save.php", {data: serializedData});
+
     webix.alert(localizator.dataSaved);
+    
 }
 
 /**
@@ -69,8 +82,10 @@ function resetFilters() {
     
     // reload grid
     $$("dataFromBackend").clearAll();
-    $$("dataFromBackend").load("http://localhost/data_master/data/data.php"); 
-    //$$("dataFromBackend").load("http://localhost:3000/data"); 
+    $$("dataFromBackend").load("http://localhost:3000/data"); 
+
+    // old backend on Apache/PHP:
+    //$$("dataFromBackend").load("http://localhost/data_master/data/data.php"); 
 }
 
 /**

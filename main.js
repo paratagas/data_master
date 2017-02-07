@@ -145,7 +145,8 @@ function createMainWindow() {
     createMenu();
 
     // load entry point for desktop app
-    mainWindow.loadURL('file://' + __dirname + '/index.html');
+    //mainWindow.loadURL('npm//' + __dirname + '/index.html');
+    mainWindow.loadURL('http://localhost:3000/');
     
     // to open dev console: The second way
     //mainWindow.webContents.openDevTools();

@@ -1,7 +1,7 @@
 {
     "name": "data_master",
     "description": "Simple ToDo list with desktop building",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "homepage": "https://github.com/paratagas/data_master",
     "repository": {
         "type": "git",
@@ -16,19 +16,22 @@
         "node.js",
         "webix",
         "electron",
+        "express",
         "ToDo list"
     ],
     "main": "main.js",
     "scripts": {
         "start": "electron .",
         "package": "electron-packager ./ DataMaster --all --out ~/release/DataMaster --overwrite",
-        "nodemon": "nodemon server.js"
+        "nodemon": "nodemon server.js",
+        "server": "node server.js"
     },
     "dependencies": {
         "electron-prebuilt": "^0.35.6",
         "electron-packager": "^8.4.0",
-        "body-parser": "^1.15.2",
-    	"express": "^4.14.0"
+        "express": "^4.14.0",
+        "body-parser": "^1.16.0",
+        "cors": "^2.8.1"
     },
     "devDependencies": {
         "gulp": "^3.9.0",
