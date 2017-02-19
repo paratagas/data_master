@@ -1,5 +1,13 @@
 <?php
 
+/**
+ * old backend logic
+ * 
+ * @author Yauheni Svirydzenka <partagas@mail.ru>
+ * @version 0.0.1
+ * @copyright Yauheni Svirydzenka 2017
+ */
+
 $dataFromFile = json_decode(file_get_contents("data.json"));
 
 echo json_encode($dataFromFile);

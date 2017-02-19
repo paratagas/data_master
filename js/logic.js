@@ -1,3 +1,11 @@
+/**
+ * main app logic
+ * 
+ * @author Yauheni Svirydzenka <partagas@mail.ru>
+ * @version 0.1.0
+ * @copyright Yauheni Svirydzenka 2017
+ */
+
 var defaultLocale = "en-US";
 
 // object from translations.js

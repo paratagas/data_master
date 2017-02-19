@@ -1,3 +1,11 @@
+/**
+ * main Electron logic
+ * 
+ * @author Yauheni Svirydzenka <partagas@mail.ru>
+ * @version 0.0.1
+ * @copyright Yauheni Svirydzenka 2017
+ */
+
 /*
  * Commands:
  * npm init - initialize npm in current directory
